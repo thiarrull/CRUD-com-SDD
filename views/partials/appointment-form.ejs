@@ -1,0 +1,53 @@
+<form action="<%= formAction %>" method="post" class="appointment-form">
+  <div class="field">
+    <label for="clientName">Nome do cliente</label>
+    <input
+      id="clientName"
+      name="clientName"
+      type="text"
+      maxlength="120"
+      autocomplete="name"
+      required
+      value="<%= appointment ? appointment.clientName : '' %>"
+    >
+  </div>
+  <div class="field">
+    <label for="service">Serviço</label>
+    <input
+      id="service"
+      name="service"
+      type="text"
+      maxlength="120"
+      required
+      value="<%= appointment ? appointment.service : '' %>"
+    >
+  </div>
+  <div class="field">
+    <label for="appointmentDate">Data</label>
+    <input
+      id="appointmentDate"
+      name="appointmentDate"
+      type="date"
+      required
+      value="<%= appointment ? appointment.appointmentDate : '' %>"
+    >
+  </div>
+  <div class="field">
+    <label for="appointmentTime">Horário</label>
+    <input
+      id="appointmentTime"
+      name="appointmentTime"
+      type="time"
+      required
+      value="<%= appointment ? appointment.appointmentTime : '' %>"
+    >
+  </div>
+  <div class="field field-full">
+    <label for="notes">Observações <span>(opcional, até 500 caracteres)</span></label>
+    <textarea id="notes" name="notes" maxlength="500" rows="5"><%= appointment ? appointment.notes : '' %></textarea>
+  </div>
+  <div class="form-actions field-full">
+    <button class="button" type="submit"><%= submitLabel %></button>
+    <a class="button button-secondary" href="/appointments">Cancelar</a>
+  </div>
+</form>

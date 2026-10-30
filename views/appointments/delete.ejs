@@ -1,0 +1,9 @@
+<%- include('../partials/header', { title: 'Confirmar exclusão' }) %>
+<p class="eyebrow">Exclusão</p>
+<h1>Excluir agendamento?</h1>
+<p>Confirme a exclusão do agendamento de <strong><%= appointment.clientName %></strong> em <%= appointment.appointmentDate %> às <%= appointment.appointmentTime %>.</p>
+<form action="/appointments/<%= appointment.id %>/delete" method="post" class="form-actions">
+  <button class="button button-danger" type="submit">Confirmar exclusão</button>
+  <a class="button button-secondary" href="/appointments/<%= appointment.id %>">Cancelar</a>
+</form>
+<%- include('../partials/footer') %>

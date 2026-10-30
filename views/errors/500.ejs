@@ -1,0 +1,6 @@
+<%- include('../partials/header', { title: 'Erro inesperado' }) %>
+<p class="eyebrow">Erro 500</p>
+<h1>Não foi possível concluir a operação</h1>
+<p><%= message || 'Ocorreu um erro inesperado. Tente novamente mais tarde.' %></p>
+<a class="button" href="/appointments">Voltar aos agendamentos</a>
+<%- include('../partials/footer') %>

@@ -1,0 +1,44 @@
+<%- include('../partials/header', { title: 'Agendamentos' }) %>
+<div class="page-heading">
+  <div>
+    <p class="eyebrow">Agenda</p>
+    <h1>Agendamentos</h1>
+    <p>Consulte e gerencie os horários cadastrados.</p>
+  </div>
+  <a class="button" href="/appointments/new">Criar agendamento</a>
+</div>
+
+<% if (appointments.length === 0) { %>
+  <section class="empty-state" aria-labelledby="empty-title">
+    <h2 id="empty-title">Nenhum agendamento cadastrado</h2>
+    <p>Crie um agendamento para começar.</p>
+    <a class="button" href="/appointments/new">Criar primeiro agendamento</a>
+  </section>
+<% } else { %>
+  <div class="table-wrap">
+    <table>
+      <caption>Agendamentos cadastrados</caption>
+      <thead>
+        <tr>
+          <th scope="col">Data</th>
+          <th scope="col">Horário</th>
+          <th scope="col">Cliente</th>
+          <th scope="col">Serviço</th>
+          <th scope="col"><span class="visually-hidden">Ações</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% appointments.forEach((appointment) => { %>
+          <tr>
+            <td><%= appointment.appointmentDate %></td>
+            <td><%= appointment.appointmentTime %></td>
+            <td><%= appointment.clientName %></td>
+            <td><%= appointment.service %></td>
+            <td><a href="/appointments/<%= appointment.id %>">Ver detalhes<span class="visually-hidden"> de <%= appointment.clientName %></span></a></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+<% } %>
+<%- include('../partials/footer') %>

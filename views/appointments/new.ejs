@@ -1,0 +1,10 @@
+<%- include('../partials/header', { title: 'Novo agendamento' }) %>
+<p class="eyebrow">Novo registro</p>
+<h1>Novo agendamento</h1>
+<p>Preencha os dados para reservar um horário.</p>
+<%- include('../partials/appointment-form', {
+  appointment,
+  formAction: '/appointments',
+  submitLabel: 'Salvar agendamento'
+}) %>
+<%- include('../partials/footer') %>
