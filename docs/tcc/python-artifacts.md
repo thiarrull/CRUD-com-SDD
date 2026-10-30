@@ -22,3 +22,10 @@
 ## Conclusão e limitações
 
 Na inspeção do baseline não foram encontrados arquivos Python, imports, chamadas externas, dependências ou scripts funcionais em Python. As únicas ocorrências textuais identificadas são referências documentais do contrato e da proposta OpenSpec. Portanto, não há artefato Python residual cuja remoção seja indicada neste momento, e a aplicação ainda não existe para uma verificação de dependência funcional. Esta conclusão é limitada ao checkout e ao SHA informados; não afirma nada sobre histórico remoto, execuções anteriores ou artefatos que venham a ser adicionados. Repetir a auditoria após a implementação e antes da validação final.
+
+## Reinspeção após a implementação
+
+- Commit inspecionado: `a1c6b2e839290db29281effdcc2d4ca04aa923ae`.
+- Verificação: `glob **/*.py` no checkout não encontrou arquivos.
+- Resultado: não foram identificados artefatos Python adicionados ao commit da aplicação.
+- Limitação: a conclusão se aplica somente ao checkout/commit inspecionado; referências documentais e histórico externo não são prova de ausência universal.

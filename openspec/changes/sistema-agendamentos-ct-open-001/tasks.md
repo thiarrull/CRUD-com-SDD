@@ -40,12 +40,12 @@
 ## 8. Qualidade, CI e cobertura
 
 - [x] 8.1 Configurar ESLint, Prettier e cobertura nativa do Node.js para unitários, integração e HTTP; executar `npm run lint`, `npm run format:check` e `npm run test:coverage`, registrando versão Node, comando, SHA, escopo e linhas/branches/funções reais.
-- [ ] 8.2 Criar workflow GitHub Actions com Node.js 24, `npm ci`, lint, formato e testes de cobertura; verificar sintaxe/configuração e associar o resultado executado ao SHA e run ID, sem considerar YAML isolado como CI aprovada.
-- [ ] 8.3 Executar a validação integrada em banco isolado e confirmar RN-001–RN-010, RF-001–RF-004, rotas HTTP, arquitetura e preservação do banco local; registrar falhas, resultados e limitações com comando, ambiente, timestamp e SHA.
+- [x] 8.2 Criar workflow GitHub Actions com Node.js 24, `npm ci`, lint, formato e testes de cobertura; verificar sintaxe/configuração e associar o resultado executado ao SHA e run ID, sem considerar YAML isolado como CI aprovada.
+- [x] 8.3 Executar a validação integrada em banco isolado e confirmar RN-001–RN-010, RF-001–RF-004, rotas HTTP, arquitetura e preservação do banco local; registrar falhas, resultados e limitações com comando, ambiente, timestamp e SHA.
 
 ## 9. Rastreabilidade e evidências acadêmicas
 
-- [ ] 9.1 Criar `docs/tcc/requirements-traceability.md` com uma linha para cada RN e RF e vínculos verificáveis entre specification, tarefa, implementação, teste, commit e resultado; manter referências ausentes como A DEFINIR ou NÃO VERIFICADO.
-- [ ] 9.2 Manter `docs/tcc/tdd-cycles.csv` e os registros de eventos coerentes com a cronologia observada, distinguindo TDD de caracterização/regressão e sem inventar prompts, horários, autoria, commits ou resultados.
-- [ ] 9.3 Registrar métricas M1–M8 com valor, unidade, fonte, período, evidência, completude e limitações; usar estados NÃO DISPONÍVEL/NÃO EXECUTADO quando aplicável e verificar que dados ausentes não foram convertidos em zero.
-- [ ] 9.4 Avaliar os gates G1–G15 com evidências vinculadas ao baseline e ao SHA final; registrar como pendentes ou não verificados os critérios sem comprovação e revisar a reprodutibilidade sem presumir aprovação.
+- [x] 9.1 Criar `docs/tcc/requirements-traceability.md` com uma linha para cada RN e RF e vínculos verificáveis entre specification, tarefa, implementação, teste, commit e resultado; manter referências ausentes como A DEFINIR ou NÃO VERIFICADO.
+- [x] 9.2 Manter `docs/tcc/tdd-cycles.csv` e os registros de eventos coerentes com a cronologia observada, distinguindo TDD de caracterização/regressão e sem inventar prompts, horários, autoria, commits ou resultados.
+- [x] 9.3 Registrar métricas M1–M8 com valor, unidade, fonte, período, evidência, completude e limitações; usar estados NÃO DISPONÍVEL/NÃO EXECUTADO quando aplicável e verificar que dados ausentes não foram convertidos em zero.
+- [x] 9.4 Avaliar os gates G1–G15 com evidências vinculadas ao baseline e ao SHA final; registrar como pendentes ou não verificados os critérios sem comprovação e revisar a reprodutibilidade sem presumir aprovação.

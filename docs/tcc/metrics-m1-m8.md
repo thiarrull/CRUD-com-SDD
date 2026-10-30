@@ -1,0 +1,18 @@
+# Métricas experimentais M1–M8
+
+Escopo desta coleta: Cenário B, desde evidências disponíveis no checkout/sessão até a validação do commit `a1c6b2e839290db29281effdcc2d4ca04aa923ae`. A sessão completa exportada e o registro prospectivo integral não estão disponíveis; valores ausentes não são tratados como zero.
+
+| Métrica | Valor | Unidade | Fonte / período | Evidência | Completude e limitações | Estado |
+|---|---|---|---|---|---|---|
+| M1 — Prompts humanos | NÃO DISPONÍVEL | mensagens | Exportação completa de sessões; período experimental | Nenhuma exportação completa disponível | O histórico visível foi resumido; não é possível reconstruir a quantidade sem inventar dados. | NÃO DISPONÍVEL |
+| M2 — Tempo de desenvolvimento | 147,73 | minutos decorridos observáveis | 2026-10-29 20:57:11−03:00 (primeiro timestamp TDD preservado) a 2026-10-29 23:24:55−03:00 (conclusão CI) | Timestamps em `tdd-cycles.csv` e run `40991500490` | Parcial: início observado pode ser posterior à primeira atividade; pausas não foram registradas/descontadas. Não representa tempo ativo nem duração total comprovada. | PARCIALMENTE MEDIDO |
+| M3 — Correções realizadas | 1 correção observável; total do experimento NÃO DISPONÍVEL | problemas distintos | Implementação e validação local, 2026-10-29 | Configuração de `DATABASE_PATH=:memory:` resolvida em `src/main/config.js`; regressão em `tests/unit/config.test.js` | Contagem parcial reconstruída de uma correção concreta observada; não existe registro completo de defeitos/correction_id para todo o período. Falhas RED esperadas não entram nesta contagem. | PARCIALMENTE MEDIDO |
+| M4 — Arquivos modificados | aplicação 33; testes 12; configuração 8; documentação 4; OpenSpec 1; total 58 | arquivos únicos por categoria | Diff Git baseline `7a6f66d` até `a1c6b2e` | `git diff --name-only 7a6f66dc899d9475c7e8dc207087a2ceaa055faf..a1c6b2e839290db29281effdcc2d4ca04aa923ae` | Contagem reproduzível do diff; categorias: `src/`, `views/` e `public/` como aplicação; `tests/`; configurações e workflow; `README.md` e `docs/`; OpenSpec. | MEDIDO |
+| M5 — Testes executados | 40 aprovados; 0 reprovados; 0 ignorados | casos na execução final do CI | Run `40991500490`, 2026-10-30T02:24:29Z–02:24:55Z | GitHub Actions e log `Test with coverage` | Um workflow final verificado; não agrega execuções intermediárias. | MEDIDO |
+| M6 — Cobertura | linhas 93,53%; branches 91,04%; funções 90,63% | percentual por dimensão | Run `40991500490`, escopo instrumentado pelo Node.js | Relatório nativo de `npm run test:coverage` no CI | Percentuais e escopo conforme runner; não são limiar contratual nem medida de qualidade dos testes. | MEDIDO |
+| M7 — Resultado da CI | SUCCESS | estado por execução/SHA | 2026-10-30T02:24:29Z; `thiarrull/CRUD-com-SDD`; workflow `Appointments CI`; branch `feature/sistema-agendamentos-ct-open-001` | Run ID `40991500490`; https://github.com/thiarrull/CRUD-com-SDD/actions/runs/40991500490; SHA `a1c6b2e839290db29281effdcc2d4ca04aa923ae` | Uma execução observada; o resultado não demonstra homologação ou aprovação do TCC. | MEDIDO |
+| M8 — Intervenções humanas | NÃO DISPONÍVEL | eventos classificados | Logs/diffs e exportação integral da sessão; período experimental | Exportação integral não disponível | Não inferir autoria ou contagem a partir do autor do commit ou do trecho resumido da conversa. | NÃO DISPONÍVEL |
+
+## Comparação entre cenários
+
+Resultados do Cenário A e comparabilidade operacional dos períodos: A DEFINIR. Não comparar as métricas acima com dados ausentes do Cenário A. A adoção do protocolo OpenSpec não presume superioridade metodológica.
